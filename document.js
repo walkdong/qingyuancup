@@ -69,6 +69,7 @@ const voiceButton = document.querySelector('.set-voice');
 
 
 const toggleVoiceMute = () => {
+    Sakana.Voices.isMute = true;
     let { isMute } = Sakana.Voices;
     isMute = !isMute;
 
@@ -84,7 +85,7 @@ voiceButton.setAttribute(
     'data-active',
     Sakana.Voices.isMute
 );
-
+voiceButton.style.display = 'none';
 // 启动
 const takina = Sakana.init({
     // 启动元素
